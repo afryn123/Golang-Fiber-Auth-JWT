@@ -35,7 +35,6 @@ vendor/
 
 # Environment & config files
 .env
-.env.*
 config.yaml
 config.json
 config.toml
@@ -60,6 +59,3 @@ coverage.out
 # Node/npm if mixed with frontend
 node_modules/
 dist/
-
-# vscode
-.vscode/
