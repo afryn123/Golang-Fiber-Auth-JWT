@@ -2,6 +2,7 @@ package main
 
 import (
 	"fiber-auth-app/config"
+	"fiber-auth-app/middleware"
 	"fiber-auth-app/routes"
 	"log"
 
@@ -20,6 +21,9 @@ func main() {
 
 	// Create Fiber app
 	app := fiber.New()
+
+	// Panic Handler
+	app.Use(middleware.CustomRecoverPanic())
 
 	// Register routes
 	routes.SetupRoutes(app)
